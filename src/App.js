@@ -28,6 +28,7 @@ const App = () => {
                 <img
                     src={SearchIcon}
                     alt="search-icon"
+                    onClick={() => searchMovies('batman')}
                 />
             </div>
         </div>
