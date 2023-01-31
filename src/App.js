@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import './App.css';
 import SearchIcon from "./assets/search.svg";
+import MovieCard from "./components/MovieCard";
 
 const API_URL = 'https://www.omdbapi.com/?apikey=8e92b44d';
 const movie = {
@@ -40,18 +41,7 @@ const App = () => {
                 />
             </div>
             <div className={"container"}>
-                <div className="movie">
-                    <div>
-                        <p>{movie.Year}</p>
-                    </div>
-                    <div>
-                        <img src={movie.Poster === 'N/A' ? 'https://via.placeholder.com/400' : movie.Poster} alt={movie.Title} />
-                    </div>
-                    <div>
-                        <span>{movie.Type}</span>
-                        <h3>{movie.Title}</h3>
-                    </div>
-                </div>
+                <MovieCard movie={movie}/>
             </div>
         </div>
     );
