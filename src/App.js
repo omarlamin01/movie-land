@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import './App.css';
-import SearchIcon from "./search.svg";
+import SearchIcon from "./assets/search.svg";
 
 const API_URL = 'https://www.omdbapi.com/?apikey=8e92b44d';
 const movie = {
