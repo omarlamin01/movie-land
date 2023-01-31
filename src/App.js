@@ -14,9 +14,15 @@ const App = () => {
     }, []);
 
     const searchMovies = async (searchTerm) => {
-        const response = await fetch(`${API_URL}&s=${searchTerm}`);
-        const data = await response.json();
-        setMovies(data.Search);
+        if (searchTerm) {
+            const response = await fetch(`${API_URL}&s=${searchTerm}`);
+            const data = await response.json();
+            setMovies(data.Search);
+        } else {
+            const response = await fetch(`${API_URL}&s=batman`);
+            const data = await response.json();
+            setMovies(data.Search);
+        }
     }
 
     return (
